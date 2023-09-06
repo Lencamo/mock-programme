@@ -15,7 +15,7 @@
 &emsp;&emsp;对原mock server内容进行的模块化划分，并将版本从`webpack4`升级到了`webpack5`
 
 > [!WARNING]
-> &emsp;&emsp;webpack5 和 webpack4 相比，webpack5：<br/>将 [devServer.before](https://v4.webpack.js.org/configuration/dev-server/#devserverbefore) 改为了 [devServer.onBeforeSetupMiddleware](https://webpack.js.org/configuration/dev-server/#devserveronbeforesetupmiddleware)<br/>将 [devServer.overlay](https://v4.webpack.js.org/configuration/dev-server/#devserveroverlay) 改为了 [devServer.client.overlay](https://webpack.js.org/configuration/dev-server/#overlay)
+> webpack5 和 webpack4 相比做了一些调整：将 [devServer.before](https://v4.webpack.js.org/configuration/dev-server/#devserverbefore) 改为了 [devServer.onBeforeSetupMiddleware](https://webpack.js.org/configuration/dev-server/#devserveronbeforesetupmiddleware)、将 [devServer.overlay](https://v4.webpack.js.org/configuration/dev-server/#devserveroverlay) 改为了 [devServer.client.overlay](https://webpack.js.org/configuration/dev-server/#overlay)
 
 ```sh
 ├── mock

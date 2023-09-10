@@ -43,3 +43,43 @@ npm install axios
 ```sh
 npm run serve
 ```
+
+## 二、vite-plugin-mock-way
+
+> 这个示例项目，可以用于`vite`环境下的数据模拟（mock）
+
+### 1、简介
+
+&emsp;&emsp;vite-plugin-mock是我在 [vue-vben-admin](https://github.com/vbenjs/vue-vben-admin) 中看到的一种用于模拟数据的方案。
+
+&emsp;&emsp;根据[vite-plugin-mock](https://github.com/vbenjs/vite-plugin-mock)的描述，它支持本地环境和生产环境，Connect 服务中间件在本地使用，mockjs 在生产环境中使用。
+
+> [!WARNING]
+> 经过我的亲身测试，vite-plugin-mock在开发环境下可以到达mock-server一样的效果。但生产环境下表现并不如意，官方自己也说了，生产环境下不支持header的获取、RESTful 格式参数获取、mock文件不要使用node模块等。除此之外，vite-plugin-mock 在使用时还不可以设置全局的baseURL（得用代理解决）。并且关于生产环境的相关issues，官方也没有进行相关fix。
+
+### 2、文件分析
+
+&emsp;&emsp;vite-plugin-mock和前面的mock-server使用基本一致，没有什么大的变动。
+
+```sh
+├── mock
+    ├── index.js
+    └── modules  # api管理
+        ├── cart.js
+        └── products.js
+```
+
+### 3、安装使用
+
+- 安装
+
+```sh
+npm install mockjs vite-plugin-mock -D
+npm install axios
+```
+
+- 使用
+
+```sh
+npm run dev
+```

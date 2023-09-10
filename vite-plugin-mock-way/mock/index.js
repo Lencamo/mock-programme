@@ -4,6 +4,4 @@ import users from './modules/users.js'
 const mocks = [...users]
 // const mocks = [...users, ...products]
 
-export default {
-  mocks
-}
+export { mocks }

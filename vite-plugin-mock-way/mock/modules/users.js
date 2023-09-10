@@ -1,4 +1,4 @@
-const Mock = require('mockjs')
+import Mock from 'mockjs'
 
 const { userList } = Mock.mock({
   'userList|35': [
